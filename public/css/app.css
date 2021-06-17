@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'Prompt';
+    src: url('../font/Prompt/Prompt-Regular.ttf');
+}
+
+body {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: normal;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.fixed-bottom {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.title-footer {
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.btn-red {
+    /* DV8 01 */
+    background: #ED1C24;
+    border-radius: 100px !important;
+    color: #FFFFFF;
+    font-family: 'Prompt';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+}
+
+.btn-red.next {
+    width: 185px;
+    height: 42px;
+}
+
+a {
+    color: #ED1C24;
+}
+
+
+
+/* 
+@media only screen and (min-width: 768px){
+    body{
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    body{
+        width: 480px;
+        margin: 0 auto;
+    }
+} */
