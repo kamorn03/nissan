@@ -45,7 +45,7 @@ class SurvayDataController extends Controller
     public function storeBrand(Request $request)
     {
         Session::put('brand', $request->selected_brand);
-        return redirect()->route('survay.period');
+        return redirect()->route('survay.personal');
     }
     
     public function storePeriod(Request $request)

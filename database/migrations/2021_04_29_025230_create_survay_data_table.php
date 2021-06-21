@@ -15,13 +15,17 @@ class CreateSurvayDataTable extends Migration
     {
         Schema::create('survay_data', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type');
+            $table->string('type')->nullable();
             $table->longText('product')->nullable();
             $table->string('location')->nullable();
+            // new
             $table->string('brand')->nullable();
             $table->string('period')->nullable();
+            // must have
             $table->string('name')->nullable();
             $table->string('phone')->nullable();
+            // new
+            $table->string('time')->nullable();
             $table->timestamps();
         });
     }

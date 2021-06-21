@@ -53,6 +53,7 @@
     </div>
 
     {{-- image 2 --}}
+    
     <div class="mt-4">
         <img class="w-100"
             src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
