@@ -65,13 +65,21 @@
             <div class="col-12 col-sm-6"> {!! $content->home_text_2 ?? '' !!}</div>
 
             <!-- Force next columns to break to new line at md breakpoint and up -->
-            
-            <div class="w-100 d-none d-md-block"></div>
 
-            <div class="col-12 col-sm-6">  {!! $content->home_text_3 ?? '' !!} </div>
-            <div class="col-12 col-sm-6"> <img class="w-100"
-                src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
-                alt="image_path_2.png"></div>
+            <div class="w-100 d-none d-md-block mt-5"></div>
+
+            <div class="col-12 col-sm-6 d-none d-sm-block"> {!! $content->home_text_3 ?? '' !!} </div>
+            
+            <div class="col-12 col-sm-6 d-none d-sm-block"> <img class="w-100"
+                    src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
+                    alt="image_path_2.png"></div>
+
+
+                    
+            <div class="col-12 col-sm-6 d-md-none"> <img class="w-100"
+                    src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
+                    alt="image_path_2.png"> </div>
+            <div class="col-12 col-sm-6 d-md-none"> {!! $content->home_text_3 ?? '' !!}</div>
         </div>
     </div>
 
