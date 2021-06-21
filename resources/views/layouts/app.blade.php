@@ -80,17 +80,15 @@
             $content = App\Models\ManageContent::first();
         @endphp
         <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
-            <h2 class="title-footer">ติดต่อเราได้ทาง</h2>
-            <div>
-
-                <a href="{{ $content->facebook_link ?? '#' }}"><img class="m-4" style="width :20px;height :20px"
-                        src="{{ asset('img/social/facebook.svg') }}" /></a>
-                <a href="{{ $content->global_link ?? '#' }}"><img class="m-4" style="width :20px;height :20px"
-                        src="{{ asset('img/social/network.svg') }}" /></a>
-                <a href="{{ $content->phone_footer ?? '#' }}"><img class="m-4" style="width :20px;height :20px"
-                        src="{{ asset('img/social/phone.svg') }}" /></a>
-
+            <div class="row overflow-content">
+                <div>
+                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
+                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
+                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
+                </div>
             </div>
+            <h2 class="title-footer">ติดต่อเราได้ทาง</h2>
+
 
             {{-- <img style={{ 'paddingRight': '20px', 'paddingLeft': '20px', 'marginBottom': '10px' }} src={website} />
             <img style={{ 'paddingRight': '20px', 'paddingLeft': '20px', 'marginBottom': '10px' }} src={phone} /><br /> --}}
@@ -145,6 +143,41 @@
             }, 3000);
         });
     </script>
+
+    <style>
+        .overflow-content {
+            transform: translate(0px, -70%);
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+
+        .btn-circle.btn-lg {
+            width: 50px;
+            height: 50px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 25px;
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+        }
+
+    </style>
 
 </body>
 

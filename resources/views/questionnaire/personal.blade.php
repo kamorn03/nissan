@@ -3,7 +3,8 @@
 @section('content')
     {{-- image 1 --}}
     <div>
-        <div class="w-100 text-center" style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');width:100%;height:200px;">
+        <div class="w-100 text-center"
+            style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');width:100%;height:200px;">
             <div class="process">
                 <div class="box-process step-1 active">
                 </div>
@@ -22,11 +23,20 @@
 
                 <div class="text-center mt-5">
                     <p class="text-left"> ชื่อ - นามสกุล</p>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                     <p class="text-left"> เบอร์ติดต่อ </p>
-                    <input type="number" name="phone" id="phone">
+                    <input type="number" name="phone" id="phone" required>
                     <p class="text-left"> เวลา </p>
-                    <input type="number" name="time" id="time">
+                    <div class="time">
+
+                        <div class="time__input">
+
+                            <input type="text" class="timepicker" required />
+
+                        </div>
+
+                    </div>
+
                 </div>
                 <div class="text-center mt-3">
                     <div>
@@ -48,6 +58,9 @@
     @endsection
 
     @push('script')
+        <link rel="stylesheet" href="{{ asset('framework/timepicker/style.css') }}" />
+        <script src="{{ asset('framework/timepicker/script.js') }}">
+        </script>
         @if (session()->has('success'))
             <script>
                 Swal.fire('บันทึกข้อมูลสำเร็จ!', '', 'success').then((result) => {
@@ -68,6 +81,7 @@
     @endpush
 
     @push('styles')
+
         <style>
             * {
                 box-sizing: border-box;
