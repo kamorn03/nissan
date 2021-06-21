@@ -82,9 +82,9 @@
         <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
             <div class="row overflow-content">
                 <div>
-                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
-                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
-                    <a class="btn btn-primary btn-circle btn-xl"> test </a>
+                    <a href=""><img src="{{ asset('img\btn\Facebook.svg') }}" alt="img\btn\Facebook.svg"></a>
+                    <a href=""><img src="{{ asset('img\btn\Call.svg') }}" alt="img\btn\Call.svg"></a>
+                    <a href=""><img src="{{ asset('img\btn\Line.svg') }}" alt="img\btn\Line.svg"></a>
                 </div>
             </div>
             <h2 class="title-footer">ติดต่อเราได้ทาง</h2>
@@ -149,34 +149,7 @@
             transform: translate(0px, -70%);
         }
 
-        .btn-circle {
-            width: 30px;
-            height: 30px;
-            text-align: center;
-            padding: 6px 0;
-            font-size: 12px;
-            line-height: 1.428571429;
-            border-radius: 15px;
-        }
-
-        .btn-circle.btn-lg {
-            width: 50px;
-            height: 50px;
-            padding: 10px 16px;
-            font-size: 18px;
-            line-height: 1.33;
-            border-radius: 25px;
-        }
-
-        .btn-circle.btn-xl {
-            width: 70px;
-            height: 70px;
-            padding: 10px 16px;
-            font-size: 24px;
-            line-height: 1.33;
-            border-radius: 35px;
-        }
-
+  
     </style>
 
 </body>
