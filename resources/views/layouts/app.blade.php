@@ -149,7 +149,19 @@
             transform: translate(0px, -70%);
         }
 
-  
+        .row>* {
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .row {
+
+            margin-right: 0;
+            margin-left: 0;
+        }
+
     </style>
 
 </body>

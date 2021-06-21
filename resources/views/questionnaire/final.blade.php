@@ -4,13 +4,13 @@
     {{-- image 1 --}}
     <div>
         <div class="w-100 text-center"
-            style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');width:100%;height:200px;">
+            style="background-image: url('{{ asset('img/banner/Banner-08 1.png') }}');width:100%;height:200px;">
             <div class="process">
                 <div class="box-process step-1 active">
                 </div>
                 <div class="box-process step-2 active">
                 </div>
-                <div class="box-process step-3">
+                <div class="box-process step-3 active">
                 </div>
             </div>
         </div>

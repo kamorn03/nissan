@@ -29,7 +29,55 @@
     </div>
 
     {{-- container 1 --}}
+
+    {{-- <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6">.col-6 .col-sm-6</div>
+            <div class="col-12 col-sm-6">.col-6 .col-sm-6</div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+            <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        </div>
+    </div> --}}
+
+
+
     <div class="container">
+
+        <div class="text-center mt-4">
+            <h5 style="font-weight: bold">นิสสันกรุงไทยรถมือสอง ช่วยคัดสรรถยนต์ที่ดีที่สุดเพื่อคุณ</h5>
+        </div>
+
+        <div class="text-center mt-3">
+            <p style="color: red"> อยากได้รถแบบไหนบอกเราได้ </p>
+            <a href="{{ route('main') }}"><button class="btn btn-red">เริ่ม!</button></a>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 col-sm-6">
+                <img class="w-100"
+                    src="{{ isset($content) && $content->image_path_1 ? asset('img/content/' . $content->image_path_1) : asset('img/dist/default-thumbnail.jpg') }}"
+                    alt="image_path_1.png">
+            </div>
+            <div class="col-12 col-sm-6"> {!! $content->home_text_2 ?? '' !!}</div>
+
+            <!-- Force next columns to break to new line at md breakpoint and up -->
+            
+            <div class="w-100 d-none d-md-block"></div>
+
+            <div class="col-12 col-sm-6">  {!! $content->home_text_3 ?? '' !!} </div>
+            <div class="col-12 col-sm-6"> <img class="w-100"
+                src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
+                alt="image_path_2.png"></div>
+        </div>
+    </div>
+
+
+
+    {{-- <div class="container">
         <div class="text-center mt-4">
             {!! $content->home_text_1 ?? '' !!}
         </div>
@@ -38,38 +86,29 @@
             <p style="color: red"> อยากได้รถแบบไหนบอกเราได้ </p>
             <a href="{{ route('main') }}"><button class="btn btn-red">เริ่ม!</button></a>
         </div>
-    </div>
-    {{-- image 1 --}}
-    <div class="mt-4">
-        <img class="w-100"
-            src="{{ isset($content) && $content->image_path_1 ? asset('img/content/' . $content->image_path_1) : asset('img/dist/default-thumbnail.jpg') }}"
-            alt="image_path_1.png">
-    </div>
+        <div class="mt-4">
+            <img class="w-100"
+                src="{{ isset($content) && $content->image_path_1 ? asset('img/content/' . $content->image_path_1) : asset('img/dist/default-thumbnail.jpg') }}"
+                alt="image_path_1.png">
+        </div>
+    </div> --}}
 
-    <div class="container">
+    {{-- <div class="container">
         <div class="text-center mt-3 mb-3">
             {!! $content->home_text_2 ?? '' !!}
         </div>
-    </div>
-
-    {{-- image 2 --}}
-    
-    <div class="mt-4">
-        <img class="w-100"
-            src="{{ isset($content) && $content->image_path_2 ? asset('img/content/' . $content->image_path_2) : asset('img/dist/default-thumbnail.jpg') }}"
-            alt="image_path_2.png">
-    </div>
-
+    </div> --}}
     <div class="container">
-        <div class="text-center mt-4">
-            {!! $content->home_text_3 ?? '' !!}
-        </div>
 
-        <div class="text-center mt-5">
+        <div class="text-center mt-4">
+            <h5 style="font-weight: bold">นิสสันกรุงไทยรถมือสอง ช่วยคัดสรรถยนต์ที่ดีที่สุดเพื่อคุณ</h5>
+        </div>
+        <div class="text-center mt-3">
             <p style="color: red"> อยากได้รถแบบไหนบอกเราได้ </p>
             <a href="{{ route('main') }}"><button class="btn btn-red">เริ่ม!</button></a>
         </div>
     </div>
+
 @endsection
 
 @push('script')
