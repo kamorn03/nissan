@@ -24,6 +24,9 @@ class CreateManageContentsTable extends Migration
             $table->string('image_path_2')->nullable();
             $table->text('home_text_3')->nullable();
             $table->string('facebook_link')->nullable();
+            $table->string('youtube_link')->nullable();
+            $table->string('instagram_link')->nullable();
+            $table->string('line_link')->nullable();
             $table->string('global_link')->nullable();
             $table->string('phone_footer')->nullable();
             $table->string('company_footer')->nullable();

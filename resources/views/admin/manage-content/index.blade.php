@@ -62,8 +62,8 @@
                                 <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 1</label>
                                 <div class="col-sm-10">
                                     <textarea name="editor2" id="editor2" rows="10" cols="80">
-                                                {!! $content->home_text_2 ?? '' !!}
-                                            </textarea>
+                                                    {!! $content->home_text_2 ?? '' !!}
+                                                </textarea>
                                 </div>
                             </div>
                             <div class="form-group row mt-3">
@@ -82,8 +82,8 @@
                                 <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 2</label>
                                 <div class="col-sm-10">
                                     <textarea name="editor3" id="editor3" rows="10" cols="80">
-                                            {!! $content->home_text_3 ?? '' !!}
-                                            </textarea>
+                                                {!! $content->home_text_3 ?? '' !!}
+                                                </textarea>
                                 </div>
                             </div>
 
@@ -92,6 +92,27 @@
                                 <div class="col-sm-10">
                                     <input type="text" name="facebook" id="facebook" class="form-control"
                                         placeholder="facebook" value="{{ $content->facebook_link ?? '' }}">
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3">
+                                <label for="description" class="col-sm-2 col-form-label text-right">link youtube</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="youtube" id="youtube" class="form-control"
+                                        placeholder="youtube" value="{{ $content->youtube_link ?? '' }}">
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3">
+                                <label for="description" class="col-sm-2 col-form-label text-right">link instagram</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="instagram" id="instagram" class="form-control"
+                                        placeholder="instagram" value="{{ $content->instagram_link ?? '' }}">
+                                </div>
+                            </div>
+                            <div class="form-group row mt-3">
+                                <label for="description" class="col-sm-2 col-form-label text-right">link line</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="line" id="line" class="form-control" placeholder="line"
+                                        value="{{ $content->line_link ?? '' }}">
                                 </div>
                             </div>
                             <div class="form-group row mt-3">
@@ -146,8 +167,8 @@
                             <div class="form-group row mt-3">
                                 <label for="description" class="col-sm-2 col-form-label text-right">city</label>
                                 <div class="col-sm-10">
-                                    <input type="text" name="district" id="district" class="form-control"
-                                        placeholder="city" value="{{ $content->district_footer ?? '' }}">
+                                    <input type="text" name="district" id="district" class="form-control" placeholder="city"
+                                        value="{{ $content->district_footer ?? '' }}">
                                 </div>
                             </div>
                             {{-- <div class="form-group row mt-3">
@@ -246,7 +267,6 @@
         $("#image2").change(function() {
             readURL2(this);
         });
-
     </script>
     <style>
         .card-tasks {
