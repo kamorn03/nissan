@@ -317,11 +317,8 @@
                         step2.addClass('in');
                     }, 200);
                 } else if (!step2.hasClass('hidden')) {
-                    step2.addClass('hidden');
-                    step3.removeClass('hidden');
-                    $('#indicator3').addClass('active');
-                    $('.btn-back').addClass('hidden');
-                    $(this).html('ตกลง');
+                    // loding
+
 
                     $.ajax({
                         type: "POST",
@@ -334,10 +331,16 @@
                             time: $('#datetimepicker3').val(),
                         },
                         success: function(resultData) {
-                            // alert("Save Complete");
+
+                            // loaded
+                            step2.addClass('hidden');
+                            step3.removeClass('hidden');
+                            $('#indicator3').addClass('active');
+                            $('.btn-back').addClass('hidden');
+                            $(this).html('ตกลง');
                         },
                         error: function() {
-                            // alert("Save fail");
+                            alert("Save fail");
                         }
                     });
                     setTimeout(function() {
@@ -381,7 +384,14 @@
                 $("#step2, #step3").addClass('hidden');
                 $("#step1").removeClass('hidden');
             });
+
+
+            $('.datetimepicker-input').datetimepicker({
+                format: 'HH:mm'
+            });
         });
+
+
 
 
 
