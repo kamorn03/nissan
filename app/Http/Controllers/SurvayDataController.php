@@ -71,6 +71,7 @@ class SurvayDataController extends Controller
             'brand' => Session::get('brand'),
             'period' => Session::get('period'),
             'name' => $request->name,
+            'time' => $request->time,
             'phone' => $request->phone,
         ]);
         //  save to db

@@ -79,12 +79,13 @@
         @php
             $content = App\Models\ManageContent::first();
         @endphp
+        
         <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
             <div class="row overflow-content">
                 <div>
-                    <a href=""><img src="{{ asset('img\btn\Facebook.svg') }}" alt="img\btn\Facebook.svg"></a>
-                    <a href=""><img src="{{ asset('img\btn\Call.svg') }}" alt="img\btn\Call.svg"></a>
-                    <a href=""><img src="{{ asset('img\btn\Line.svg') }}" alt="img\btn\Line.svg"></a>
+                    <a href="{{ $content->facebook_link ?? '#' }}"><img src="{{ asset('img\btn\Facebook.svg') }}" alt="img\btn\Facebook.svg"></a>
+                    <a href="tel:{{ $content->phone ?? '#' }}"><img src="{{ asset('img\btn\Call.svg') }}" alt="img\btn\Call.svg"></a>
+                    <a href="{{ $content->line_link ?? '#' }}"><img src="{{ asset('img\btn\Line.svg') }}" alt="img\btn\Line.svg"></a>
                 </div>
             </div>
             <h2 class="title-footer">ติดต่อเราได้ทาง</h2>
