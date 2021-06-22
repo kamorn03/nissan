@@ -15,39 +15,10 @@
             </div>
         </div>
 
-
-
         <div class="container">
-            <form action="{{ route('store.personal') }}" method="POST">
-                @csrf
-
-                <div class="text-center mt-5">
-                    <p class="text-left"> ชื่อ - นามสกุล</p>
-                    <input type="text" name="name" id="name" required>
-                    <p class="text-left"> เบอร์ติดต่อ </p>
-                    <input type="number" name="phone" id="phone" required>
-                    <p class="text-left"> เวลา </p>
-                    <div class="time">
-
-                        <div class="time__input">
-
-                            <input type="text" class="timepicker" required />
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="text-center mt-3">
-                    <div>
-                        <button class="btn btn-red next">ส่งข้อมูล</button><br>
-                        <div class="mt-2">
-                            <a  class="text-deco-none" href="{{ route('main') }}">ย้อนกลับ</a>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            
         </div>
+        
 
         <div class="container">
             <div class="text-center m-5">
