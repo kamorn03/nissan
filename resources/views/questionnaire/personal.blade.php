@@ -4,7 +4,7 @@
     {{-- image 1 --}}
     <div>
         <div class="w-100 text-center"
-            style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');width:100%;height:200px;">
+            style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');min-height: 200px;background-size: cover;background-repeat: no-repeat;">
             <div class="process">
                 <div class="box-process step-1 active">
                 </div>
