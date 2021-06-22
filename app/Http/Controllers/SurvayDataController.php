@@ -59,10 +59,13 @@ class SurvayDataController extends Controller
         $data = [
             'name' => $request->name,
             'phone' => $request->phone,
+            'time' => $request->time,
         ];
 
         Session::put('name', $request->name);
         Session::put('phone', $request->phone);
+        Session::put('time', $request->time);
+
         // Session::get('type');
         $data = SurvayData::create([
             'type' => Session::get('type'),

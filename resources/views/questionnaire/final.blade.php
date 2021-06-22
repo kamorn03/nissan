@@ -4,7 +4,7 @@
     {{-- image 1 --}}
     <div>
         <div class="w-100 text-center"
-            style="background-image: url('{{ asset('img/banner/Banner-08 1.png') }}');width:100%;height:200px;">
+            style="background-image: url('{{ asset('img/banner/Banner-08 1.png') }}');min-height: 200px;background-size: cover;background-repeat: no-repeat;">
             <div class="process">
                 <div class="box-process step-1 active">
                 </div>
@@ -20,7 +20,7 @@
         </div>
 
 
-        <div class="container">
+        <div class="container"  style="margin-bottom : 5rem">
             <div class="text-center m-5">
                 <a class="text-deco-none" href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg">
                     กลับหน้าแรก </a>

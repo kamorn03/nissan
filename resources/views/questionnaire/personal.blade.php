@@ -37,7 +37,7 @@
 
                         <div class="time__input">
 
-                            <input type="text" class="timepicker" required />
+                            <input type="text" name="time" id="time" class="timepicker" required />
 
                         </div>
 

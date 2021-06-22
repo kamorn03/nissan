@@ -79,7 +79,6 @@
         @php
             $content = App\Models\ManageContent::first();
         @endphp
-        
         <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
             <div class="row overflow-content">
                 <div>
