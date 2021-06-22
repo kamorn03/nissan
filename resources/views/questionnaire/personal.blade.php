@@ -20,13 +20,12 @@
         <div class="container">
             <form action="{{ route('store.personal') }}" method="POST">
                 @csrf
-
                 <div class="text-center mt-5">
-                    <p class="text-left"> ชื่อ - นามสกุล</p>
+                    <p class=""> ชื่อ - นามสกุล</p>
                     <input type="text" name="name" id="name" required>
-                    <p class="text-left"> เบอร์ติดต่อ </p>
+                    <p class=""> เบอร์ติดต่อ </p>
                     <input type="number" name="phone" id="phone" required>
-                    <p class="text-left"> เวลา </p>
+                    <p class=""> เวลา </p>
                     <div class="time">
 
                         <div class="time__input">
@@ -38,7 +37,7 @@
                     </div>
 
                 </div>
-                <div class="text-center mt-3">
+                <div class="text-center mt-5">
                     <div>
                         <button class="btn btn-red next">ส่งข้อมูล</button><br>
                         <div class="mt-2">

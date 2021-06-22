@@ -71,14 +71,6 @@
                 color: #ED1C24;
             }
 
-            input {
-                margin-top: 0.5em;
-                width: 300px;
-                height: 68px;
-                border: 1px solid #000000;
-                box-sizing: border-box;
-            }
-
             .process {
                 margin: auto 10px;
                 display: flex;

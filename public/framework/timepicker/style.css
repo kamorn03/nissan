@@ -1,9 +1,9 @@
 
 
 .time {
-  width: 50%;
+  width: 300px;
   min-width: 200px;
-  margin: 25px auto;
+  margin: 0px auto;
 }
 .time__heading {
   text-align: center;
