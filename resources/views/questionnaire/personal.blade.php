@@ -42,7 +42,7 @@
                     <div>
                         <button class="btn btn-red next">ส่งข้อมูล</button><br>
                         <div class="mt-2">
-                            <a  class="text-deco-none" href="{{ route('main') }}">ย้อนกลับ</a>
+                            <a class="text-deco-none" href="{{ route('main') }}">ย้อนกลับ</a>
                         </div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                         $.ajax({
                             url: '{!! route('clear.survey') !!}',
                             success: function(result) {
-                                window.location = '{!! route('home') !!}';
+                                window.location = '{!! route('survay.final') !!}';
                             }
                         });
                     }

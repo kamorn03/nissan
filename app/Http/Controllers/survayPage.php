@@ -35,4 +35,9 @@ class survayPage extends Controller
     }
 
 
+    public function finalPageSurvay(Request $request)
+    {
+        return view('questionnaire.final');    
+    }
+
 }

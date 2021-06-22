@@ -44,6 +44,12 @@ Route::post('/survay/store-period', [SurvayDataController::class,'storePeriod'])
 
 Route::get('/survay/personal', [survayPage::class, 'survayPersonal'])->name('survay.personal');
 Route::post('/survay/store-personal', [SurvayDataController::class,'confirmStorePersonal'])->name('store.personal');
+
+// new
+Route::get('/survay/final', [survayPage::class,'finalPageSurvay'])->name('survay.final');
+
+
+
 Route::get('clear/survey', [SurvayDataController::class, 'clearSurvey'])->name('clear.survey');
 // Auth::routes();
 
