@@ -67,18 +67,7 @@
     @push('script')
 
         <!-- partial -->
-        <script src="{{ asset('js/vendor/jquery-3.3.1.min.js') }}"></script>
-        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
-        <script
-                src='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js'>
-        </script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-        
-        <script src="{{ asset('js/script-time.js') }}"></script>
-
+  
 
         @if (session()->has('success'))
             <script>

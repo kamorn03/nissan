@@ -21,14 +21,13 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}" />
-
     <link rel="icon" href="{{ asset('img/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css'>
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css'>
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
@@ -70,7 +69,7 @@
 
     </style>
 
-    <title>{{ config('app.name') }}</title>
+    {{-- <title>{{ config('app.name') }}</title> --}}
 </head>
 
 <body>
@@ -109,7 +108,7 @@
                 {{ $content->province_footer ?? '' }} {{ $content->zipcode_footer ?? '' }} </p>
         </div>
     </footer>
-   
+
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
@@ -118,7 +117,7 @@
     </script>
     <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 
-    
+
     <script src="{{ asset('js/bootstrap.min.js') }}">
     </script>
     <script src="{{ asset('js/fontawesome.min.js') }}">
@@ -129,16 +128,16 @@
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
     <script
-            src='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js'>
+        src='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js'>
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
-    
+
+
     <script src="{{ asset('js/script-time.js') }}"></script>
 
 
     @stack('script')
     @stack('styles')
-   
+
 
     {{-- Success Alert --}}
     @if (session('status'))
@@ -166,6 +165,12 @@
             setTimeout(function() {
                 $(".alert").alert('close');
             }, 3000);
+
+            $('.datepickers').datetimepicker({
+                format: 'LT'
+            });
+
+
         });
     </script>
 

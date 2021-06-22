@@ -72,7 +72,6 @@
 
 @endsection
 @push('script')
-    <script src="{{ asset('js/vendor/jquery-3.3.1.min.js') }}"></script>
     <script>
         // $('body').on('click',function(){
         //     alert(1);

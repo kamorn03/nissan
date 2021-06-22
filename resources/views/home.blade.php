@@ -276,7 +276,6 @@
 @endsection
 
 @push('script')
-    <script src="{{ asset('js/vendor/jquery-3.3.1.min.js') }}"></script>
     <script>
         // $('.carousel').carousel({
         //     interval: 1000 * 1
