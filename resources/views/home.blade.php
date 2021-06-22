@@ -293,7 +293,7 @@
 
         .modal-body {
             max-height: 500px;
-            overflow: scroll;
+            overflow: auto;
         }
 
         .modal-footer {
