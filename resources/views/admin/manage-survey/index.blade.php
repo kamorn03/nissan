@@ -47,11 +47,8 @@
                                 <thead>
                                     <tr>
                                         <th>No</th>
-                                        <th>ประเภท</th>
-                                        <th>สินค้า</th>
-                                        <th>location</th>
-                                        <th>store</th>
-                                        <th>ช่วงเวลา</th>
+                                        <th>ประเภทรถ</th>
+                                        <th>เวลา</th>
                                         <th>ชื่อ</th>
                                         <th>เบอร์โทร</th>
                                     </tr>
@@ -93,54 +90,36 @@
                         }
                     },
                     {
-                        data: 'type',
-                        name: 'type',
-                        render: function(data, type, full, meta) {
-                            var type = [null, 'เอเจนซี่โฆษณา', 'เจ้าของธุรกิจ', 'เจ้าของธุรกิจ'];
-                            console.log(full)
-                            return type[full.type]
-                        }
-                    },
-                    {
-                        data: 'product',
-                        name: 'product'
-                    },
-                    {
-                        data: 'location',
-                        name: 'location'
-                    },
-                    {
                         data: 'brand',
                         name: 'brand',
                         render: function(data, type, full, meta) {
+                            console.log(full);
                             if (full.brand) {
                                 var brand = full.brand.split(',');
-
+                                console.log(brand);
                                 var array = [
                                     null,
-                                    'Image 2 1.png',
-                                    'Image 3 1.png',
-                                    'Image 5 1.png',
-                                    'Image 6 1.png',
-                                    'Image 7 1.png',
-                                    'Image -9 1.png'
+                                    'car-type1.svg',
+                                    'car-type2.svg',
+                                    'car-type3.svg',
+                                    'car-type4.svg',
                                 ]
 
                                 var img = '';
-                                var path = '{!! asset('img/brand') !!}';
+                                var path = '{!! asset('img/icon') !!}';
                                 if (brand.length > 1) {
                                     brand.forEach(element => {
                                         // console.log(path + '/' + array[element])
                                         img += '<img style="margin-right:5px;" src="' +
                                             path +
                                             '/' + array[element] +
-                                            '" width="20" height="20">';
+                                            '" width="70" height="70">';
                                     });
                                 } else {
                                     img += '<img style="margin-right:5px;" src="' + path + '/' +
                                         array[
                                             brand] +
-                                        '" width="20" height="20">';
+                                        '" width="70" height="70">';
                                 }
 
 
@@ -151,8 +130,8 @@
                         }
                     },
                     {
-                        data: 'period',
-                        name: 'period'
+                        data: 'time',
+                        name: 'time'
                     },
                     {
                         data: 'name',
