@@ -15,6 +15,7 @@ class SurvayData extends Model
         'brand',
         'period',
         'name',
+        'time',
         'phone',
     ];   
 
