@@ -73,7 +73,7 @@ class SurvayDataController extends Controller
             'type' => Session::get('type'),
             'product' => Session::get('product'),
             'location' => Session::get('location'),
-            'brand' => Session::get('brand'),
+            'brand' => Session::get('brand') ? Session::get('brand') : $request->brand,
             // 'period' => Session::get('period'),
             'name' => $request->name,
             'time' => $request->time,

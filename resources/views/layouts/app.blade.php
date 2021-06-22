@@ -20,12 +20,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}" />
 
     <link rel="icon" href="{{ asset('img/favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
     <style>
         /*
             these styles will animate bootstrap alerts.
@@ -82,9 +89,12 @@
         <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
             <div class="row overflow-content">
                 <div>
-                    <a href="{{ $content->facebook_link ?? '#' }}"><img src="{{ asset('img\btn\Facebook.svg') }}" alt="img\btn\Facebook.svg"></a>
-                    <a href="tel:{{ $content->phone ?? '#' }}"><img src="{{ asset('img\btn\Call.svg') }}" alt="img\btn\Call.svg"></a>
-                    <a href="{{ $content->line_link ?? '#' }}"><img src="{{ asset('img\btn\Line.svg') }}" alt="img\btn\Line.svg"></a>
+                    <a href="{{ $content->facebook_link ?? '#' }}"><img src="{{ asset('img\btn\Facebook.svg') }}"
+                            alt="img\btn\Facebook.svg"></a>
+                    <a href="tel:{{ $content->phone ?? '#' }}"><img src="{{ asset('img\btn\Call.svg') }}"
+                            alt="img\btn\Call.svg"></a>
+                    <a href="{{ $content->line_link ?? '#' }}"><img src="{{ asset('img\btn\Line.svg') }}"
+                            alt="img\btn\Line.svg"></a>
                 </div>
             </div>
             <h2 class="title-footer">ติดต่อเราได้ทาง</h2>
@@ -99,21 +109,36 @@
                 {{ $content->province_footer ?? '' }} {{ $content->zipcode_footer ?? '' }} </p>
         </div>
     </footer>
+   
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    @stack('script')
-    @stack('styles')
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
+    
     <script src="{{ asset('js/bootstrap.min.js') }}">
     </script>
     <script src="{{ asset('js/fontawesome.min.js') }}">
     </script>
     <script src="{{ asset('js/app.js') }}"></script>
+
+    <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+    <script
+            src='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js'>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+    
+    <script src="{{ asset('js/script-time.js') }}"></script>
+
+
+    @stack('script')
+    @stack('styles')
+   
 
     {{-- Success Alert --}}
     @if (session('status'))

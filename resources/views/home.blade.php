@@ -45,6 +45,7 @@
 
     <div class="modal" id="welcome-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
         <div class="modal-dialog" role="document">
+
             <div class="modal-content">
                 <div class="hca-dialog__content">
 
@@ -117,7 +118,10 @@
 
                                         <div class="time__input">
 
-                                            <input type="text" name="time" id="time" class="timepicker" required />
+                                            {{-- <input type="text" name="time" id="time" class="timepicker" required /> --}}
+
+                                            <input type="text" name="time" id="datetimepicker3" class="datetimepicker-input"
+                                                data-toggle="datetimepicker" data-target="#datetimepicker3" required />
 
                                         </div>
 
@@ -162,7 +166,7 @@
 
                 </div>
 
-                <div class="modal-footer">
+                <div class="modal-footer mb-5">
                     <button type="button" class="btn btn-back hidden">ย้อนกลับ</button>
                     <button type="button" class="btn btn-default btn-close hidden" data-dismiss="modal">Dismiss</button>
                     <button onClick="handleNextStep()" type="button" class="btn btn-red next">ถัดไป</button>
@@ -318,6 +322,24 @@
                     $('#indicator3').addClass('active');
                     $('.btn-back').addClass('hidden');
                     $(this).html('ตกลง');
+
+                    $.ajax({
+                        type: "POST",
+                        url: '{!! route('store.personal') !!}',
+                        data: {
+                            "_token": "{{ csrf_token() }}",
+                            brand: slected_car,
+                            name: $('#name').val(),
+                            phone: $('#phone').val(),
+                            time: $('#datetimepicker3').val(),
+                        },
+                        success: function(resultData) {
+                            // alert("Save Complete");
+                        },
+                        error: function() {
+                            // alert("Save fail");
+                        }
+                    });
                     setTimeout(function() {
                         step3.addClass('in');
                     }, 200);
@@ -325,6 +347,24 @@
                     // $("#welcome-modal").modal("hide");
                     // $('#welcome-modal').modal().hide();
                     $(".btn-close").click();
+
+                    // $.ajax({
+                    //         url: '{!! route('store.personal') !!}',
+                    //         method: 'post',
+                    //         data: {
+                    //             type: slected_car,
+                    //             name: $('#name').val(),
+                    //             phone: $('#phone').val(),
+                    //             time: $('#datetimepicker3').val(),
+                    //         }).success: function(result) {
+                    //         window.location = '{!! route('home') !!}';
+                    //     }
+                    // });
+
+
+
+
+
                     // $('#welcome-modal').modal('toggle'); 
                     // reset || close
                     // $("#welcome-modal").removeClass("show");
@@ -406,7 +446,7 @@
         .modal-content {
             box-shadow: 0px 16px 30px 0px fade;
             background-color: #F5F5F5;
-            height: 575px;
+            height: auto;
             position: relative;
         }
 
@@ -421,8 +461,8 @@
         }
 
         .modal-body {
-            max-height: 500px;
-            overflow: auto;
+            height: 400px;
+            overflow: inherit;
         }
 
         .modal-footer {
@@ -436,6 +476,11 @@
 
         .modal-footer button+button {
             margin-left: 10px;
+        }
+
+        .dropdown-menu.bootstrap-datetimepicker-widget {
+            z-index: 1000;
+            /* position: relative; */
         }
 
         .indicators {

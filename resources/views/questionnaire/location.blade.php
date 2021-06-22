@@ -2,112 +2,54 @@
 
 @section('content')
     {{-- image 1 --}}
-    <div>
-        <div class="w-100 text-center" style="background-image: url('{{ asset('img/main.png') }}');height:200px;">
-            <div class="process">
-                <div class="box-process step-1 active">
-                </div>
-                <div class="box-process step-2 active">
-                </div>
-                <div class="box-process step-3 active">
-                </div>
-                <div class="box-process step-4">
-                </div>
-                <div class="box-process step-5">
-                </div>
-                <div class="box-process step-6">
-                </div>
-            </div>
-            <div style="vertical-align: middle;line-height: 150px;color:#fff">
-                ระบุความครอบคลุมของโฆษณา ของคุณ
-            </div>
-            <div class="text-right">
-                <img class="pull-right" src="{{ asset('img/logo.png') }}" alt="logo.png">
-            </div>
-        </div>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="row mb-4">
+    <div class="col text-center">
+      <h3>Bootstrap 4 and Tempus Dominus in a modal</h3>
+      <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#modal">Click to open Modal</a>
     </div>
+  </div>
+</div>
 
-    <div class="container">
-        <div class="text-center mt-5">
-            @php
-                $type = Session::get('type');
-                $product = Session::get('product');
-            @endphp
-            {{-- {{ $type }}
-            {{ $product }} --}}
-            <form action="{{ route('store.location') }}" method="POST">
-                @csrf
-                <div>
-                    <select name="location" id="location" required>
-                        <option value="" style="color: #666666;"> เลือกความครอบคลุม </option>
-                        <option value="ทั่วประเทศ">ทั่วประเทศ</option>
-                        <option value="กรุงเทพและปริมณฑล">กรุงเทพและปริมณฑล</option>
-                        <option value="ภาคกลาง">ภาคกลาง</option>
-                        <option value="ภาคตะวันออก">ภาคตะวันออก</option>
-                        <option value="ภาคตะวันออกเฉียงเหนือ">ภาคตะวันออกเฉียงเหนือ</option>
-                        <option value="ภาคใต้">ภาคใต้</option>
-                        <option value="ภาคเหนือ">ภาคเหนือ</option>
-                    </select>
-                </div>
-                <div class="mt-3">
-                    <button class="btn btn-red next">ถัดไป</button><br>
-                    <div class="mt-2">
-                        <a href="{{ route('survay.product', ['type' => $type]) }}">ย้อนกลับ</a>
-                    </div>
-                </div>
-            </form>
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modalLabel">Modal</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Date and time</label>
+              <input type="text" class="form-control datetimepicker-input" id="datetimepicker1" data-toggle="datetimepicker" data-target="#datetimepicker1" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Date only</label>
+              <input type="text" class="form-control datetimepicker-input" id="datetimepicker2" data-toggle="datetimepicker" data-target="#datetimepicker2" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label>Time only</label>
+              <input type="text" class="form-control datetimepicker-input" id="datetimepicker3" data-toggle="datetimepicker" data-target="#datetimepicker3" />
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
     </div>
-
-    <div class="container">
-        <div class="text-center m-5">
-            <a href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg"> กลับหน้าแรก </a>
-        </div>
-    </div>
-
+  </div>
+</div>
+<!-- partial -->
 
 @endsection
-
-
-@push('styles')
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .process {
-            margin: auto 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-        }
-
-        select {
-            width: 300px;
-            height: 68px;
-            border: 1px solid #000000;
-            background: #fff;
-        }
-
-        .box-process {
-            /* flex:1 1 auto; */
-            width: 40px;
-            height: 10px;
-            margin: 5px;
-            background: #fff;
-        }
-
-        .box-process.active {
-            /* flex:1 1 auto; */
-            width: 40px;
-            height: 10px;
-            margin: 5px;
-            background: #000;
-        }
-
-        
-
-    </style>
-
-@endpush

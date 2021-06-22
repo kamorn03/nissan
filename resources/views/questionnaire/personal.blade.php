@@ -2,6 +2,7 @@
 
 @section('content')
     {{-- image 1 --}}
+
     <div>
         <div class="w-100 text-center"
             style="background-image: url('{{ asset('img/banner/Banner-07 1.png') }}');min-height: 200px;background-size: cover;background-repeat: no-repeat;">
@@ -33,12 +34,11 @@
 
 
                     <p class=""> เวลา </p>
-                    <div class="time">
+                    <div class="time text-center">
 
                         <div class="time__input">
-
-                            <input type="text" name="time" id="time" class="timepicker" required />
-
+                            <input type="text" name="time" id="datetimepicker3" class="datetimepicker-input"
+                                data-toggle="datetimepicker" data-target="#datetimepicker3" required />
                         </div>
 
                     </div>
@@ -65,9 +65,21 @@
     @endsection
 
     @push('script')
-        <link rel="stylesheet" href="{{ asset('framework/timepicker/style.css') }}" />
-        <script src="{{ asset('framework/timepicker/script.js') }}">
+
+        <!-- partial -->
+        <script src="{{ asset('js/vendor/jquery-3.3.1.min.js') }}"></script>
+        <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js'></script>
+        <script
+                src='https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js'>
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+        
+        <script src="{{ asset('js/script-time.js') }}"></script>
+
+
         @if (session()->has('success'))
             <script>
                 Swal.fire('บันทึกข้อมูลสำเร็จ!', '', 'success').then((result) => {
