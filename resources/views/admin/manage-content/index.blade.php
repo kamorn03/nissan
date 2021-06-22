@@ -39,14 +39,14 @@
                                 </div>
                             </div>
                             {{-- after meta --}}
-                            <div class="form-group row mt-3">
+                            {{-- <div class="form-group row mt-3">
                                 <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 1</label>
                                 <div class="col-sm-10">
                                     <textarea name="editor1" id="editor1" rows="10" cols="80">
                                                 {!! $content->home_text_1 ?? '' !!}
                                             </textarea>
                                 </div>
-                            </div>
+                            </div> --}}
                             <div class="form-group row mt-3">
                                 <label for="" class="col-sm-2 col-form-label text-right">main cover image</label>
                                 <div class="col-sm-10">
@@ -59,7 +59,7 @@
                                 </div>
                             </div>
                             <div class="form-group row mt-3">
-                                <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 2</label>
+                                <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 1</label>
                                 <div class="col-sm-10">
                                     <textarea name="editor2" id="editor2" rows="10" cols="80">
                                                 {!! $content->home_text_2 ?? '' !!}
@@ -79,7 +79,7 @@
                             </div>
 
                             <div class="form-group row mt-3">
-                                <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 3</label>
+                                <label for="meta_keyword" class="col-sm-2 col-form-label text-right">text 2</label>
                                 <div class="col-sm-10">
                                     <textarea name="editor3" id="editor3" rows="10" cols="80">
                                             {!! $content->home_text_3 ?? '' !!}

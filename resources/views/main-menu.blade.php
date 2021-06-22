@@ -63,7 +63,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container" style="margin-bottom : 5rem">
         <div class="text-center m-5">
             <a class="text-deco-none" href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg">
                 กลับหน้าแรก </a>

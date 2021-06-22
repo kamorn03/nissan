@@ -20,11 +20,18 @@
         <div class="container">
             <form action="{{ route('store.personal') }}" method="POST">
                 @csrf
-                <div class="text-center mt-5">
+                <div class="mt-5">
                     <p class=""> ชื่อ - นามสกุล</p>
-                    <input type="text" name="name" id="name" required>
+                    <div class="text-center">
+                        <input type="text" name="name" id="name" required>
+                    </div>
+
                     <p class=""> เบอร์ติดต่อ </p>
-                    <input type="number" name="phone" id="phone" required>
+                    <div class="text-center ">
+                        <input type="number" name="phone" id="phone" required>
+                    </div>
+
+
                     <p class=""> เวลา </p>
                     <div class="time">
 
@@ -37,7 +44,7 @@
                     </div>
 
                 </div>
-                <div class="text-center mt-5">
+                <div class="text-center mt-3">
                     <div>
                         <button class="btn btn-red next">ส่งข้อมูล</button><br>
                         <div class="mt-2">
@@ -48,7 +55,7 @@
             </form>
         </div>
 
-        <div class="container">
+        <div class="container" style="margin-bottom : 5rem">
             <div class="text-center m-5">
                 <a class="text-deco-none" href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg">
                     กลับหน้าแรก </a>
@@ -92,6 +99,12 @@
                 text-decoration: none;
             }
 
+            p {
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-weight: bold;
+                padding-left: 20px;
+            }
 
             p.text-left {
                 margin-left: 3em;
