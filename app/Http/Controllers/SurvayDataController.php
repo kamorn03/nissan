@@ -28,8 +28,8 @@ class SurvayDataController extends Controller
         // $this->validate($request, [
         //     'email' => 'required'
         // ]);
-    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail());
-        // dd('sent to kamornpisit03@gmail.com successfully');
+    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail($name));
+
     	return true;
     }
 

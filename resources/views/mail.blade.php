@@ -4,6 +4,6 @@
 	<title>Test Mail</title>
 </head>
 <body>
-	<p>This is the mail you get from me.</p>
+	<p>This is the mail you get from {{ $name }}.</p>
 </body>
 </html>
