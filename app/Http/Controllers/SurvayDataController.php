@@ -10,6 +10,7 @@ use Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Input;
+use App\Models\ManageContent;
 
 class SurvayDataController extends Controller
 {
@@ -28,7 +29,13 @@ class SurvayDataController extends Controller
         // $this->validate($request, [
         //     'email' => 'required'
         // ]);
-    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail($name, $type, $time, $phone));
+        $content = ManageContent::first();
+        $email = null;
+        if($content){
+            $email = $content->email ?? null;
+        }
+
+    	Mail::to($email)->send(new SendMail($name, $type, $time, $phone));
     	return true;
     }
 
