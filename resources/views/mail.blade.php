@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test Mail</title>
+	<title>การเก็บข้อมูลผู้ใช้</title>
 </head>
 <body>
-	<p>This is the mail you get from {{ $name }}.</p>
+	<p>มีการกรอกข้อมูลจากผู้ใช้ ชื่อ : {{ $name }}.</p>
 </body>
 </html>

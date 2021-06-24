@@ -30,6 +30,6 @@ class SendMail extends Mailable
     public function build()
     {
         $name = $this->name;
-        return $this->view('mail', compact('name'))->subject('Test Mail');
+        return $this->view('mail', compact('name'))->subject('การเก็บข้อมูลผู้ใช้');
     }
 }
