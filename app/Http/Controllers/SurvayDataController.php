@@ -7,7 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
 use Yajra\Datatables\Datatables;
-
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMail;
+use Illuminate\Support\Facades\Input;
 
 class SurvayDataController extends Controller
 {
@@ -20,6 +22,19 @@ class SurvayDataController extends Controller
     {
         return view('admin.manage-survey.index');
     }
+
+    public function send(Request $request)
+    {
+        // $this->validate($request, [
+        //     'email' => 'required'
+        // ]);
+
+    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail());
+
+        dd('sent to kamornpisit03@gmail.com successfully');
+    	return redirect()->back()->with('success', 'Email sent successfully. Check your email.');
+    }
+
 
 
     public function storeProduct(Request $request)

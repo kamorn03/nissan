@@ -28,6 +28,8 @@ Route::get('/main', function () {
     return view('main-menu');
 })->name('main');
 
+Route::get('/sent', [SurvayDataController::class,'send'])->name('sent.email');
+
 
 // take survay
 Route::get('/survay/{type}/product', [survayPage::class, 'survayProduct'])->name('survay.product');
