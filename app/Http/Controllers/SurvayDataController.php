@@ -23,16 +23,14 @@ class SurvayDataController extends Controller
         return view('admin.manage-survey.index');
     }
 
-    public function send(Request $request)
+    public function send($name)
     {
         // $this->validate($request, [
         //     'email' => 'required'
         // ]);
-
     	Mail::to('kamornpisit03@gmail.com')->send(new SendMail());
-
-        dd('sent to kamornpisit03@gmail.com successfully');
-    	return redirect()->back()->with('success', 'Email sent successfully. Check your email.');
+        // dd('sent to kamornpisit03@gmail.com successfully');
+    	return true;
     }
 
 
@@ -95,6 +93,7 @@ class SurvayDataController extends Controller
             'phone' => $request->phone,
         ]);
         //  save to db
+        $this->send($request->name);
         return redirect()->route('survay.personal')->with('success' , 'save data success!');
     }
 
