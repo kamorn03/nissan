@@ -24,6 +24,7 @@ class ManageContent extends Model
         "line_link",
         "global_link",
         "phone_footer",
+        "email",
         "company_footer",
         "address_footer",
         "road_footer",

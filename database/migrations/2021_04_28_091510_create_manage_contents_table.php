@@ -29,6 +29,7 @@ class CreateManageContentsTable extends Migration
             $table->string('line_link')->nullable();
             $table->string('global_link')->nullable();
             $table->string('phone_footer')->nullable();
+            $table->string('email')->nullable();
             $table->string('company_footer')->nullable();
             $table->string('address_footer')->nullable();
             $table->string('road_footer')->nullable();

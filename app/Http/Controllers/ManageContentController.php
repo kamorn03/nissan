@@ -122,6 +122,7 @@ class ManageContentController extends Controller
             "line_link" =>  $request->line,
             "global_link" =>  $request->global,
             "phone_footer" =>  $request->phone,
+            "email" =>  $request->email,
             "company_footer" => $request->company,
             "address_footer" => $request->address,
             "road_footer" => $request->road,

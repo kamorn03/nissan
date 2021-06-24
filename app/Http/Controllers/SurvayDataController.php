@@ -28,8 +28,7 @@ class SurvayDataController extends Controller
         // $this->validate($request, [
         //     'email' => 'required'
         // ]);
-    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail($name));
-
+    	Mail::to('kamornpisit03@gmail.com')->send(new SendMail($name, $type, $time, $phone));
     	return true;
     }
 
@@ -92,8 +91,16 @@ class SurvayDataController extends Controller
             'time' => $request->time,
             'phone' => $request->phone,
         ]);
+
+        $type = [
+            'รถ eco car',
+            'รถเก๋ง 4 ประตู',
+            'รถกระบะ',
+            'รถ SUV',
+        ];
+
         //  save to db
-        $this->send($request->name);
+        $this->send($request->name, $type[$request->brand - 1] ,$request->time, $request->phone);
         return redirect()->route('survay.personal')->with('success' , 'save data success!');
     }
 

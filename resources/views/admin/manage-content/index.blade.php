@@ -129,7 +129,13 @@
                                         value="{{ $content->phone_footer ?? '' }}">
                                 </div>
                             </div>
-
+                            <div class="form-group row mt-3">
+                                <label for="description" class="col-sm-2 col-form-label text-right">email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="email" id="email" class="form-control" placeholder="email"
+                                        value="{{ $content->email ?? '' }}">
+                                </div>
+                            </div>
                             {{-- $table->string('company-footer')->nullable();
                                 $table->string('address-footer')->nullable();
                                 $table->string('road-footer')->nullable();
