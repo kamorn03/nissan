@@ -121,6 +121,14 @@ class SurvayDataController extends Controller
     {
         Session::flush();
     }
+
+
+     // get
+     public function getSurvey(Request $request)
+     {
+        $data = SurvayData::find($request->id);
+        return $data;
+     }
     /**
      * Show the form for creating a new resource.
      *

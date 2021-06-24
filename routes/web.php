@@ -50,7 +50,7 @@ Route::post('/survay/store-personal', [SurvayDataController::class,'confirmStore
 // new
 Route::get('/survay/final', [survayPage::class,'finalPageSurvay'])->name('survay.final');
 
-
+Route::post('/survay/get', [SurvayDataController::class,'getSurvey'])->name('survay.get');
 
 Route::get('clear/survey', [SurvayDataController::class, 'clearSurvey'])->name('clear.survey');
 // Auth::routes();

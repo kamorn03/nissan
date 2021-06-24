@@ -11,6 +11,43 @@
         </div>
     </div>
     <div class="row">
+        <div class="modal fade" id="ajaxModel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="modelHeading">ข้อมูล</h4>
+                        <span class="text-right"> <button class="btn btn-default" style="cursor: pointer" data-dismiss="modal">X </button> </span>
+                    </div>
+                    <div class="modal-body">
+                        <form id="CurrenciesForm" name="CurrenciesForm" class="form-horizontal">
+                            <input type="hidden" name="currency_id" id="currency_id">
+                            <div class="form-group">
+                                <h2 class="col-sm-12 control-label">ชื่อ : <span id="show-name"></span></h2>
+                            </div>
+
+                            <div class="form-group">
+                                <h2 class="col-sm-12 control-label">ประเภท</h2>
+                                <div class="col-sm-12">
+                                    <div id="show-type"></div>
+                                    <hr>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <h2 class="col-sm-12 control-label">เวลา : <span id="show-time"></span></h2>
+
+                            </div>
+
+                            <div class="form-group">
+                                <h2 class="col-sm-12 control-label">เบอร์โทร : <span id="show-phone"></span></h2>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-12 col-md-12">
             <div class="card card-tasks">
                 <div class="card-body">
@@ -72,6 +109,42 @@
             // Edit record
             $('#survey-table').on('click', 'td.editor-edit', function(e) {
                 console.log('edit', $(this).children().data('id'));
+
+                $('#show-time').html("");
+                $('#show-type').html("");
+                $('#show-name').html("");
+                $('#show-phone').html("");
+                $.ajax({
+                    url: "{{ route('survay.get') }}",
+                    // headers: {
+                    //     'CSRFToken': '{{ csrf_token() }}'
+                    // },
+                    method: 'post',
+                    data: {
+                        "_token": '{{ csrf_token() }}',
+                        'id': $(this).children().data('id'),
+                    },
+                    success: function(data) {
+
+                        console.log(data)
+                        var path = '{!! asset('img/icon') !!}';
+                        var type = [
+                            'car-type1.svg',
+                            'car-type2.svg',
+                            'car-type3.svg',
+                            'car-type4.svg',
+                        ];
+
+                        $('#show-time').html(data.time);
+                        $('#show-type').html('<img src="' + path + "/" + type[data.brand - 1] +
+                            '" alt="' +
+                            data.brand + '" />');
+                        $('#show-name').html(data.name);
+                        $('#show-phone').html(data.phone);
+                    }
+                })
+
+
             });
 
             // Delete a record
@@ -152,16 +225,20 @@
                     },
                     {
                         data: null,
-                        className: "dt-center editor-delete",
+                        className: "dt-center editor-edit",
                         render: function(data, type, row) {
-                            return '<a href="/admin/survay/' + row.id +
-                                '/show"><i class="fa fa-eye" data-id="' + row.id + '"></i></a>'
+                            return '<a data-toggle="modal" class="show-surway" data-id="' + row.id +
+                                '" data-target="#ajaxModel" ><i class="fa fa-eye" data-id="' + row
+                                .id + '"></a>'
                             // return '<a href="/nissan/admin/survay/' + row.id +
                             //     '/show"><i class="fa fa-eye" data-id="' + row.id + '"></i></a>'
                         }
                     }
                 ]
             });
-        });
 
+            // $('.show-surway').on('click',function(){
+            //     console.log($(this).data().id)
+            // })
+        });
     </script>
