@@ -43,7 +43,7 @@
                     <div>
                         <button class="btn btn-red next">ถัดไป</button><br>
                         <div class="mt-2">
-                            <a href="/nissan">ย้อนกลับ</a>
+                            <a href="/">ย้อนกลับ</a>
                         </div>
                     </div>
                 </form>
@@ -53,7 +53,7 @@
 
     <div class="container">
         <div class="text-center mt-5">
-            <a href="/nissan"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg"> กลับหน้าแรก </a>
+            <a href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg"> กลับหน้าแรก </a>
         </div>
     </div>
 

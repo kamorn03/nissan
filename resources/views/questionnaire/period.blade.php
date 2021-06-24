@@ -67,7 +67,7 @@
 
     <div class="container">
         <div class="text-center m-5">
-            <a href="/nissan"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg"> กลับหน้าแรก </a>
+            <a href="/"><img src="{{ asset('img/icon/homepage.svg') }}" alt="homepage.svg"> กลับหน้าแรก </a>
         </div>
     </div>
 

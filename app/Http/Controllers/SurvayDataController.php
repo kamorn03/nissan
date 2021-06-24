@@ -24,7 +24,7 @@ class SurvayDataController extends Controller
         return view('admin.manage-survey.index');
     }
 
-    public function send($name)
+    public function send($name, $type, $time, $phone)
     {
         // $this->validate($request, [
         //     'email' => 'required'
@@ -34,7 +34,6 @@ class SurvayDataController extends Controller
         if($content){
             $email = $content->email ?? null;
         }
-
     	Mail::to($email)->send(new SendMail($name, $type, $time, $phone));
     	return true;
     }
@@ -149,9 +148,12 @@ class SurvayDataController extends Controller
      * @param  \App\Models\SurvayData  $survayData
      * @return \Illuminate\Http\Response
      */
-    public function show(SurvayData $survayData)
+    public function show($id)
     {
-        //
+        $survayData = SurvayData::find($id);
+
+        return view('admin.manage-survey.show',compact('survayData'));
+       
     }
 
     /**

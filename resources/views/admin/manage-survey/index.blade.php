@@ -51,6 +51,7 @@
                                         <th>เวลา</th>
                                         <th>ชื่อ</th>
                                         <th>เบอร์โทร</th>
+                                        <th>เรียกดู</th>
                                     </tr>
                                 </thead>
                             </table>
@@ -149,6 +150,16 @@
 
                         }
                     },
+                    {
+                        data: null,
+                        className: "dt-center editor-delete",
+                        render: function(data, type, row) {
+                            return '<a href="/admin/survay/' + row.id +
+                                '/show"><i class="fa fa-eye" data-id="' + row.id + '"></i></a>'
+                            // return '<a href="/nissan/admin/survay/' + row.id +
+                            //     '/show"><i class="fa fa-eye" data-id="' + row.id + '"></i></a>'
+                        }
+                    }
                 ]
             });
         });

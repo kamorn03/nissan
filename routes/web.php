@@ -87,8 +87,12 @@ Route::group(['middleware' => 'auth:admin'], function () {
 
         Route::get('/survay/list', [SurvayDataController::class, 'surveyList'])->name('survey.list');
         Route::get('admin/survay', [SurvayDataController::class, 'index'])->name('survay');
+        Route::get('admin/survay/{id}/show', [SurvayDataController::class, 'show'])->name('survay.show');
+
+
 
         Route::get('admin/content', [ManageContentController::class, 'index'])->name('content');
+        
         Route::post('admin/content/{id}/update', [ManageContentController::class, 'update'])->name('content.update');
     });
 });
