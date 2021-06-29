@@ -5,10 +5,10 @@
 
             <a href="{{ $content->facebook_link ?? '#' }}"><img class="m-2" style="width :20px;"
                     src="{{ asset('img/social/facebook.svg') }}" /></a>
-            <a href="{{ $content->youtube_link ?? '#' }}"><img class="m-2" style="width :25px;"
+            {{-- <a href="{{ $content->youtube_link ?? '#' }}"><img class="m-2" style="width :25px;"
                     src="{{ asset('img/social/youtube.svg') }}" /></a>
             <a href="{{ $content->instagram_link ?? '#' }}"><img class="m-2" style="width :20px"
-                    src="{{ asset('img/social/instagram.svg') }}" /></a>
+                    src="{{ asset('img/social/instagram.svg') }}" /></a> --}}
         </div>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-md-auto gap-2">

@@ -16,33 +16,58 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title" id="modelHeading">ข้อมูล</h4>
-                        <span class="text-right"> <button class="btn btn-default" style="cursor: pointer" data-dismiss="modal">X </button> </span>
+                        <span class="text-right"> <button class="btn btn-default" style="cursor: pointer"
+                                data-dismiss="modal">X </button> </span>
                     </div>
                     <div class="modal-body">
                         <form id="CurrenciesForm" name="CurrenciesForm" class="form-horizontal">
                             <input type="hidden" name="currency_id" id="currency_id">
                             <div class="form-group">
-                                <h2 class="col-sm-12 control-label">ชื่อ : <span id="show-name"></span></h2>
-                            </div>
-
-                            <div class="form-group">
-                                <h2 class="col-sm-12 control-label">ประเภท</h2>
-                                <div class="col-sm-12">
-                                    <div id="show-type"></div>
-                                    <hr>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h2> ชื่อ :</h2>
+                                    </div>
+                                    <div class="col-8">
+                                        <h2> <span id="show-name"></span> </h2>
+                                    </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <h2 class="col-sm-12 control-label">เวลา : <span id="show-time"></span></h2>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h2> ประเภท :</h2>
+                                    </div>
+                                    <div class="col-8">
+                                        <div id="show-type"></div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h2> เวลา :</h2>
+                                    </div>
+                                    <div class="col-8">
+                                        <h2> <span id="show-time"></span></h2>
+                                    </div>
+                                </div>
+                                {{-- <h2 class="col-sm-12 control-label"><span>  : </span> </h2> --}}
 
                             </div>
 
                             <div class="form-group">
-                                <h2 class="col-sm-12 control-label">เบอร์โทร : <span id="show-phone"></span></h2>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <h2> เบอร์โทร :</h2>
+                                    </div>
+                                    <div class="col-8">
+                                        <h2> <span id="show-phone"></span></h2>
+                                    </div>
+                                </div>
                             </div>
-
-
                         </form>
                     </div>
                 </div>
