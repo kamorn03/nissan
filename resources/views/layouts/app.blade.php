@@ -85,12 +85,12 @@
         @php
             $content = App\Models\ManageContent::first();
         @endphp
-        <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;">
+        <div class="mt-3" style="width: 100%;padding-top: 10px;padding-bottom: 30px;background-color: black;font-size: 13px;">
             <div class="row overflow-content">
                 <div>
                     <a href="{{ $content->facebook_link ?? '#' }}"><img src="{{ asset('img\btn\Facebook.svg') }}"
                             alt="img\btn\Facebook.svg"></a>
-                    <a href="tel:{{ $content->phone ?? '#' }}"><img src="{{ asset('img\btn\Call.svg') }}"
+                    <a href="tel:{{ $content->phone_footer ?? '#' }}"><img src="{{ asset('img\btn\Call.svg') }}"
                             alt="img\btn\Call.svg"></a>
                     <a href="{{ $content->line_link ?? '#' }}"><img src="{{ asset('img\btn\Line.svg') }}"
                             alt="img\btn\Line.svg"></a>
@@ -106,6 +106,8 @@
             <p class="m-0" style="color :white;">{{ $content->road_footer ?? '' }}
                 {{ $content->district_footer ?? '' }} {{ $content->city_footer ?? '' }}
                 {{ $content->province_footer ?? '' }} {{ $content->zipcode_footer ?? '' }} </p>
+                {{-- {{ $content }} --}}
+            <p class="m-0" style="color :white;">{{ $content->phone_footer ? ' โทรศัพท์: ' . $content->phone_footer : '' }}</p>
         </div>
     </footer>
 

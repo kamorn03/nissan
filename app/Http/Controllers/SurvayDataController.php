@@ -106,7 +106,7 @@ class SurvayDataController extends Controller
         ];
 
         //  save to db
-        $this->send($request->name, $type[$request->brand - 1] ,$request->time, $request->phone);
+        // $this->send($request->name, $type[$request->brand - 1] ,$request->time, $request->phone);
         return redirect()->route('survay.personal')->with('success' , 'save data success!');
     }
 
